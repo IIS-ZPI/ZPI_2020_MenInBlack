@@ -2,14 +2,27 @@ import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
+const categoriesApi = "http://localhost:4000/categories";
 class FormComponent extends Component {
 
     constructor() {
         super();
         this.state = {
             amount: "00.00",
-            category: 1
+            categories: [],
+            category: "groceries"
         };
+    }
+
+    componentDidMount = () => {
+        fetch(categoriesApi)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        categories: result
+                    })
+                });
     }
 
     onAmountChange = (newValue) => {
@@ -60,11 +73,11 @@ class FormComponent extends Component {
                             as="select"
                             onChange={this.onCategoryChange}
                         >
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            {
+                                this.state.categories.map((option, index) => {
+                                    return (<option key={index} value={option}>{option}</option>)
+                                })
+                            }
                         </Form.Control>
                     </Form.Group>
 
