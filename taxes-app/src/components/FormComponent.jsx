@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-const categoriesApi = "http://localhost:4000/categories";
+const categoriesApi = "http://localhost:4000/categories"
+
 class FormComponent extends Component {
 
     constructor() {
@@ -48,7 +49,7 @@ class FormComponent extends Component {
 
     render() {
         return (
-            <div>
+            <div id="formComponent">
                 <Form>
                     <Form.Group controlId="formDesiredAmount">
                         <Form.Label>Desired buy price</Form.Label>
@@ -81,7 +82,11 @@ class FormComponent extends Component {
                         </Form.Control>
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button
+                        variant="primary"
+                        type="button"
+                        onClick={this.props.submitPress}
+                    >
                         Submit
                     </Button>
                 </Form>
