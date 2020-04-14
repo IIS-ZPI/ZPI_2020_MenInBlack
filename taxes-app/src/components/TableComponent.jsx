@@ -6,8 +6,8 @@ const columns = [{
     dataField: 'state',
     text: 'State'
 }, {
-    dataField: 'productCategory',
-    text: 'Product category'
+    dataField: 'tax',
+    text: 'tax'
 }, {
     dataField: 'netto',
     text: 'Sell for'
@@ -20,17 +20,12 @@ class TableComponent extends Component {
 
     constructor(props) {
         super();
-        this.state = {
-            products: [
-                { state: 'alabama', productCategory: 'some', netto: '1.20', margin: '0.21' },
-                { state: 'california', productCategory: 'someOne', netto: '1.50', margin: '0.31' }
-            ]
-        }
+        this.state = {}
     }
     render() {
         return (
             <div>
-                <BootstrapTable keyField='id' data={this.state.products} columns={columns} />
+                <BootstrapTable keyField='id' data={this.props.tableData} columns={columns} />
             </div>
         );
     }

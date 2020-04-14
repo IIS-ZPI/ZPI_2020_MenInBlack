@@ -27,19 +27,19 @@ class FormComponent extends Component {
     }
 
     onAmountChange = (newValue) => {
-        console.log(newValue.target.value);
         this.setState({
             ...this.state,
             amount: newValue.target.value
         })
+        this.props.amountChange(newValue.target.value);
     }
 
     onCategoryChange = (newCategory) => {
-        console.log(newCategory.target.value);
         this.setState({
             ...this.state,
             category: newCategory.target.value
         })
+        this.props.categoryChange(newCategory.target.value);
     }
 
     validate = () => {

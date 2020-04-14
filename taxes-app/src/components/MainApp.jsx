@@ -3,17 +3,69 @@ import FormComponent from './FormComponent';
 import TableComponent from './TableComponent'
 import '../css/form.css'
 
+const statesApi = "http://localhost:4000/states"
+
 class MainApp extends Component {
     constructor(props) {
         super();
         this.state = {
-            displayTable: false
+            displayTable: false,
+            category: "groceries",
+            amount: "0.00",
+            data: []
         }
     }
 
     displayTable = () => {
+        this.constructTableData();
+
         this.setState({
             displayTable: true
+        })
+    }
+
+    countNettoValue = (tax, desiredPrice) => {
+        let divider = tax + 1;
+        return this.formatPrice(desiredPrice / divider);
+    }
+
+    formatPrice = (number) => {
+        return Number(number).toFixed(2);
+    }
+
+    constructTableData = () => {
+        let resultsArray = [];
+        let tempRecord;
+        fetch(statesApi)
+            .then(res => res.json())
+            .then((
+                result => {
+                    for (var k in result) {
+                        //get the tax in given state
+                        let tax = +result[k][this.state.category] + +result[k].base;
+                        //count netto prive
+                        let nettoPrice = this.countNettoValue(tax, this.state.amount);
+
+                        tempRecord = { state: k, tax: tax, netto: nettoPrice, margin: this.formatPrice(this.state.amount - nettoPrice) }
+                        resultsArray.push(tempRecord);
+                    };
+                    console.log(resultsArray);
+                    this.setState({
+                        data: resultsArray
+                    })
+                }
+            ))
+    }
+
+    categoryChange = (category) => {
+        this.setState({
+            category
+        })
+    }
+
+    amountChange = (amount) => {
+        this.setState({
+            amount
         })
     }
 
@@ -22,11 +74,15 @@ class MainApp extends Component {
             <div id="mainComponent">
                 <FormComponent
                     submitPress={this.displayTable}
+                    categoryChange={this.categoryChange}
+                    amountChange={this.amountChange}
                 >
                 </FormComponent>
                 <br />
                 {this.state.displayTable &&
-                    <TableComponent>
+                    <TableComponent
+                        tableData={this.state.data}
+                    >
                     </TableComponent>
                 }
             </div>
