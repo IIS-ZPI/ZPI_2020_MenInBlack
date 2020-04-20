@@ -18,3 +18,13 @@ If you want to learn more about creating good readme files then refer the follow
 - [ASP.NET Core](https://github.com/aspnet/Home)
 - [Visual Studio Code](https://github.com/Microsoft/vscode)
 - [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
+# Running the app
+To run the app type those commands:
+
+# Preparing database
+npm i -g json-server
+json-server -p 4000 src/database/data.json
+
+# Run the app itself
+npm start
