@@ -18,7 +18,8 @@ steps:
 - script: |
     cd taxes-app
     npm install
-    npm i -g json-server json-server -p 4000 src/database/data.json
+    npm i -g json-server 
+    json-server -p 4000 src/database/data.json
     npm run build
     npm start
   displayName: 'npm install and build'
