@@ -34,7 +34,7 @@
         },
         {
             "name": "gripex",
-            "category": "nonPrescriptinDrug"
+            "category": "nonPrescriptionDrug"
         },
         {
             "name": "t-shirt",
@@ -49,7 +49,7 @@
         "groceries",
         "preparedFood",
         "prescriptionDrug",
-        "nonPrescriptinDrug",
+        "nonPrescriptionDrug",
         "clothing",
         "intangibles"
     ]

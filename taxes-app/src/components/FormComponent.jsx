@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import InputGroup from 'react-bootstrap/InputGroup'
 
-const categoriesApi = "http://localhost:4000/categories"
+const categoriesApi = "http://localhost:4000/products"
 
 class FormComponent extends Component {
 
@@ -10,8 +11,8 @@ class FormComponent extends Component {
         super();
         this.state = {
             amount: "00.00",
-            categories: [],
-            category: "groceries"
+            products: [],
+            category: "preparedFood"
         };
     }
 
@@ -21,7 +22,7 @@ class FormComponent extends Component {
             .then(
                 (result) => {
                     this.setState({
-                        categories: result
+                        products: result
                     })
                 });
     }
@@ -34,12 +35,13 @@ class FormComponent extends Component {
         this.props.amountChange(newValue.target.value);
     }
 
-    onCategoryChange = (newCategory) => {
+    onProductChange = (newProduct) => {
+        console.log(newProduct.target.value);
         this.setState({
             ...this.state,
-            category: newCategory.target.value
+            category: newProduct.target.value
         })
-        this.props.categoryChange(newCategory.target.value);
+        this.props.categoryChange(newProduct.target.value);
     }
 
     validate = () => {
@@ -70,16 +72,21 @@ class FormComponent extends Component {
 
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>Select item category</Form.Label>
-                        <Form.Control
-                            as="select"
-                            onChange={this.onCategoryChange}
-                        >
-                            {
-                                this.state.categories.map((option, index) => {
-                                    return (<option key={index} value={option}>{option}</option>)
-                                })
-                            }
-                        </Form.Control>
+                        <InputGroup>
+                            <InputGroup.Prepend>
+                                <InputGroup.Text id="inputGroupPrepend">{this.state.category}</InputGroup.Text>
+                            </InputGroup.Prepend>
+                            <Form.Control
+                                as="select"
+                                onChange={this.onProductChange}
+                            >
+                                {
+                                    this.state.products.map((option, index) => {
+                                        return (<option key={index} value={option.category}>{option.name}</option>)
+                                    })
+                                }
+                            </Form.Control>
+                        </InputGroup>
                     </Form.Group>
 
                     <Button
