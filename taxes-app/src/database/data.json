@@ -19,6 +19,32 @@
             "intangibles": "0.00"
         }
     },
+    "products": [
+        {
+            "name": "cheese",
+            "category": "preparedFood"
+        },
+        {
+            "name": "tomato",
+            "category": "groceries"
+        },
+        {
+            "name": "xanax",
+            "category": "prescriptionDrug"
+        },
+        {
+            "name": "gripex",
+            "category": "nonPrescriptinDrug"
+        },
+        {
+            "name": "t-shirt",
+            "category": "clothing"
+        },
+        {
+            "name": "program",
+            "category": "intangibles"
+        }
+    ],
     "categories": [
         "groceries",
         "preparedFood",
