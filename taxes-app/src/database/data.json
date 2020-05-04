@@ -10,9 +10,9 @@
             "intangibles": "0.00"
         },
         "illinois": {
-            "base": "6.25",
+            "base": "0.0625",
             "groceries": "0.01",
-            "preparedFood": "8.25",
+            "preparedFood": "0.0825",
             "prescriptionDrug": "0.01",
             "nonPrescriptinDrug": "0.01",
             "clothing": "0.00",
