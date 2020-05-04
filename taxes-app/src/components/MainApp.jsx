@@ -46,7 +46,7 @@ class MainApp extends Component {
                         //count netto prive
                         let nettoPrice = this.countNettoValue(tax, this.state.amount);
 
-                        tempRecord = { state: k, tax: tax, netto: nettoPrice, margin: this.formatPrice(this.state.amount - nettoPrice) }
+                        tempRecord = { state: k, tax: tax * 100 + '%', netto: nettoPrice, margin: this.formatPrice(this.state.amount - nettoPrice) }
                         resultsArray.push(tempRecord);
                     };
                     console.log(resultsArray);

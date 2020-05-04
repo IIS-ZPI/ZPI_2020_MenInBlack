@@ -7,13 +7,13 @@ const columns = [{
     text: 'State'
 }, {
     dataField: 'tax',
-    text: 'tax'
+    text: 'tax (in %)'
 }, {
     dataField: 'netto',
     text: 'Sell for'
 }, {
     dataField: 'margin',
-    text: 'profit'
+    text: 'tax (in $)'
 }];
 
 class TableComponent extends Component {
