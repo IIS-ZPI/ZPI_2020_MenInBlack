@@ -1,6 +1,6 @@
 {
     "states": {
-        "alabama": {
+        "Alabama": {
             "base": "0.04",
             "groceries": "0.00",
             "preparedFood": "0.00",
@@ -9,7 +9,106 @@
             "clothing": "0.00",
             "intangibles": "0.00"
         },
-        "illinois": {
+        "Arizona": {
+            "base": "0.056",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Arkansas": {
+            "base": "0.065",
+            "groceries": "0.0125",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "California": {
+            "base": "0.0725",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Colorado": {
+            "base": "0.029",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Connecticut": {
+            "base": "0.0635",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.01"
+        },
+        "District of Columbia": {
+            "base": "0.0575",
+            "groceries": "0.00",
+            "preparedFood": "0.10",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Florida": {
+            "base": "0.06",
+            "groceries": "0.00",
+            "preparedFood": "0.09",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Georgia": {
+            "base": "0.04",
+            "groceries": "0.04",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Guam": {
+            "base": "0.04",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Hawaii": {
+            "base": "0.04166",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Idaho": {
+            "base": "0.06",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Illinois": {
             "base": "0.0625",
             "groceries": "0.01",
             "preparedFood": "0.0825",
@@ -17,28 +116,283 @@
             "nonPrescriptinDrug": "0.01",
             "clothing": "0.00",
             "intangibles": "0.00"
+        },
+        "Indiana": {
+            "base": "0.07",
+            "groceries": "0.00",
+            "preparedFood": "0.09",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Iowa": {
+            "base": "0.06",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Kansas": {
+            "base": "0.065",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Kentucky": {
+            "base": "0.06",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Louisiana": {
+            "base": "0.0445",
+            "groceries": "0.07",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptinDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
         }
+
     },
     "products": [
         {
-            "name": "cheese",
-            "category": "preparedFood"
+            "name": "apple",
+            "category": "groceries"
+        },
+        {
+            "name": "orange",
+            "category": "groceries"
+        },
+        {
+            "name": "pineapple",
+            "category": "groceries"
         },
         {
             "name": "tomato",
             "category": "groceries"
         },
         {
+            "name": "bread",
+            "category": "groceries"
+        },
+        {
+            "name": "soda",
+            "category": "groceries"
+        },
+        {
+            "name": "cereal",
+            "category": "groceries"
+        },
+        {
+            "name": "milk",
+            "category": "groceries"
+        },
+        {
+            "name": "rice",
+            "category": "groceries"
+        },
+        {
+            "name": "maize",
+            "category": "groceries"
+        },
+        {
+            "name": "wheat",
+            "category": "groceries"
+        },
+
+        {
+            "name": "cheese",
+            "category": "preparedFood"
+        },
+        {
+            "name": "cheeseburger",
+            "category": "preparedFood"
+        },
+        {
+            "name": "sandwich",
+            "category": "preparedFood"
+        },
+        {
+            "name": "chicken salad",
+            "category": "preparedFood"
+        },
+        {
+            "name": "lobster",
+            "category": "preparedFood"
+        },
+        {
+            "name": "ramen",
+            "category": "preparedFood"
+        },
+        {
+            "name": "tomato puree",
+            "category": "preparedFood"
+        },
+        {
+            "name": "canned beans",
+            "category": "preparedFood"
+        },
+
+
+        {
             "name": "xanax",
             "category": "prescriptionDrug"
         },
+        {
+            "name": "morphine",
+            "category": "prescriptionDrug"
+        },
+        {
+            "name": "vicodin",
+            "category": "prescriptionDrug"
+        },
+        {
+            "name": "simvastatin",
+            "category": "prescriptionDrug"
+        },
+        {
+            "name": "Lisinopril",
+            "category": "prescriptionDrug"
+        },
+        {
+            "name": "Levothyroxine",
+            "category": "prescriptionDrug"
+        },
+        {
+            "name": "Azithromycin",
+            "category": "prescriptionDrug"
+        },
+        {
+            "name": "LMetformin",
+            "category": "prescriptionDrug"
+        },
+
+
         {
             "name": "gripex",
             "category": "nonPrescriptionDrug"
         },
         {
+            "name": "Dextromethorphan",
+            "category": "nonPrescriptionDrug"
+        },
+        {
+            "name": "advil",
+            "category": "nonPrescriptionDrug"
+        },
+        {
+            "name": "aleve",
+            "category": "nonPrescriptionDrug"
+        },
+        {
+            "name": "dulcolax",
+            "category": "nonPrescriptionDrug"
+        },
+        {
+            "name": "cepacol",
+            "category": "nonPrescriptionDrug"
+        },
+        {
+            "name": "cortaid",
+            "category": "nonPrescriptionDrug"
+        },
+        {
+            "name": "colace",
+            "category": "nonPrescriptionDrug"
+        },
+
+
+        {
             "name": "t-shirt",
             "category": "clothing"
+        },
+        {
+            "name": "shirt",
+            "category": "clothing"
+        },
+        {
+            "name": "dress",
+            "category": "clothing"
+        },
+        {
+            "name": "jumper",
+            "category": "clothing"
+        },
+        {
+            "name": "jacket",
+            "category": "clothing"
+        },
+        {
+            "name": "jeans",
+            "category": "clothing"
+        },
+        {
+            "name": "suit",
+            "category": "clothing"
+        },
+        {
+            "name": "tie",
+            "category": "clothing"
+        },
+        {
+            "name": "hat",
+            "category": "clothing"
+        },
+        {
+            "name": "coat",
+            "category": "clothing"
+        },
+        {
+            "name": "sweatshirt",
+            "category": "clothing"
+        },
+        {
+            "name": "blouse",
+            "category": "clothing"
+        },
+
+
+        {
+            "name": "program",
+            "category": "intangibles"
+        },
+        {
+            "name": "mobile app",
+            "category": "intangibles"
+        },
+        {
+            "name": "patent",
+            "category": "intangibles"
+        },
+        {
+            "name": "life insurance",
+            "category": "intangibles"
+        },
+        {
+            "name": "security investment",
+            "category": "intangibles"
+        },
+        {
+            "name": "digital music",
+            "category": "intangibles"
+        },
+        {
+            "name": "program",
+            "category": "intangibles"
+        },
+        {
+            "name": "customer list",
+            "category": "intangibles"
         },
         {
             "name": "program",
