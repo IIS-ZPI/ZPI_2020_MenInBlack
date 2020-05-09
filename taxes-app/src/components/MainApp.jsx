@@ -43,10 +43,12 @@ class MainApp extends Component {
                     for (var k in result) {
                         //get the tax in given state
                         let tax = +result[k][this.state.category] + +result[k].base;
+                        tax = tax * 100;
+                        tax = tax.toFixed(2);
                         //count netto prive
                         let nettoPrice = this.countNettoValue(tax, this.state.amount);
 
-                        tempRecord = { state: k, tax: tax * 100 + '%', netto: nettoPrice, margin: this.formatPrice(this.state.amount - nettoPrice) }
+                        tempRecord = { state: k, tax: tax + '%', netto: nettoPrice, margin: this.formatPrice(this.state.amount - nettoPrice) }
                         resultsArray.push(tempRecord);
                     };
                     console.log(resultsArray);
