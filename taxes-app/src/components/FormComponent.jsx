@@ -53,24 +53,7 @@ class FormComponent extends Component {
         return (
             <div id="formComponent">
                 <Form>
-                    <Form.Group controlId="formDesiredAmount">
-                        <Form.Label>Desired buy price</Form.Label>
-                        <Form.Control
-                            type="number"
-                            min="0.00"
-                            max="10000.00"
-                            step="0.01"
-                            lang="en_EN"
-                            placeholder={this.state.amount}
-                            onChange={this.onAmountChange}
-                            isInvalid={this.validate()}
-                        />
-                        <Form.Text className="text-muted">
-                            In dollars (format xx.xx)
-                        </Form.Text>
-                    </Form.Group>
-
-                    <Form.Group controlId="exampleForm.ControlSelect1">
+                <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>Select item category</Form.Label>
                         <InputGroup>
                             <InputGroup.Prepend>
@@ -87,6 +70,23 @@ class FormComponent extends Component {
                                 }
                             </Form.Control>
                         </InputGroup>
+                    </Form.Group>
+                    
+                    <Form.Group controlId="formDesiredAmount">
+                        <Form.Label>Desired buy price</Form.Label>
+                        <Form.Control
+                            type="number"
+                            min="0.00"
+                            max="10000.00"
+                            step="0.01"
+                            lang="en_EN"
+                            placeholder={this.state.amount}
+                            onChange={this.onAmountChange}
+                            isInvalid={this.validate()}
+                        />
+                        <Form.Text className="text-muted">
+                            In dollars (format xx.xx)
+                        </Form.Text>
                     </Form.Group>
 
                     <Button
