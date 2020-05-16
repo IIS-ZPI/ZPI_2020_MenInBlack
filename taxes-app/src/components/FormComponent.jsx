@@ -3,7 +3,8 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import InputGroup from 'react-bootstrap/InputGroup'
 
-const categoriesApi = "http://localhost:4000/products"
+const productsApi = "http://localhost:4000/products"
+const categoriesApi = "http://localhost:4000/categories"
 
 class FormComponent extends Component {
 
@@ -12,17 +13,28 @@ class FormComponent extends Component {
         this.state = {
             amount: "00.00",
             products: [],
-            category: "preparedFood"
+            categories: [],
+            category: "groceries"
         };
     }
 
     componentDidMount = () => {
-        fetch(categoriesApi)
+        fetch(productsApi)
             .then(res => res.json())
             .then(
                 (result) => {
                     this.setState({
                         products: result
+                    })
+                });
+
+        fetch(categoriesApi)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    console.log(result);
+                    this.setState({
+                        categories: result
                     })
                 });
     }
@@ -36,12 +48,18 @@ class FormComponent extends Component {
     }
 
     onProductChange = (newProduct) => {
-        console.log(newProduct.target.value);
         this.setState({
             ...this.state,
             category: newProduct.target.value
         })
         this.props.categoryChange(newProduct.target.value);
+    }
+
+    onCategoryChange = (newCategory) => {
+        this.setState({
+            ...this.state,
+            category: newCategory.target.value
+        })
     }
 
     validate = () => {
@@ -73,16 +91,24 @@ class FormComponent extends Component {
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>Select item category</Form.Label>
                         <InputGroup>
-                            <InputGroup.Prepend>
-                                <InputGroup.Text id="inputGroupPrepend">{this.state.category}</InputGroup.Text>
-                            </InputGroup.Prepend>
+                            <Form.Control
+                                as="select"
+                                onChange={this.onCategoryChange}
+                            >
+                                {
+                                    this.state.categories.map((option, index) => {
+                                        return (<option key={index} value={option}>{option}</option>)
+                                    })
+                                }
+                            </Form.Control>
                             <Form.Control
                                 as="select"
                                 onChange={this.onProductChange}
                             >
                                 {
                                     this.state.products.map((option, index) => {
-                                        return (<option key={index} value={option.category}>{option.name}</option>)
+                                        if (option.category === this.state.category)
+                                            return (<option key={index} value={option.category}>{option.name}</option>)
                                     })
                                 }
                             </Form.Control>
