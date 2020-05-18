@@ -18,6 +18,6 @@ steps:
 - script: |
     cd taxes-app
     npm install
-    npm run build
-    npm run test:ci
+    npm run start-db &
+    npm start
   displayName: 'npm install and build'
