@@ -12,7 +12,9 @@ class FormComponent extends Component {
         this.state = {
             amount: "00.00",
             products: [],
-            category: "preparedFood"
+            category: "preparedFood",
+            product: "apple",
+            quantity: "10"
         };
     }
 
@@ -35,11 +37,17 @@ class FormComponent extends Component {
         this.props.amountChange(newValue.target.value);
     }
 
+    fetchQuantity = () => {
+        return this.state.products.find(product => product.name === this.state.product).quantity
+    }
+
     onProductChange = (newProduct) => {
-        console.log(newProduct.target.value);
+        let { options, selectedIndex } = newProduct.target
         this.setState({
             ...this.state,
-            category: newProduct.target.value
+            category: newProduct.target.value,
+            product: options[selectedIndex].innerHTML,
+            quantity: this.fetchQuantity()
         })
         this.props.categoryChange(newProduct.target.value);
     }
@@ -53,11 +61,11 @@ class FormComponent extends Component {
         return (
             <div id="formComponent">
                 <Form>
-                <Form.Group controlId="exampleForm.ControlSelect1">
+                    <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>Select item category</Form.Label>
                         <InputGroup>
                             <InputGroup.Prepend>
-                                <InputGroup.Text id="inputGroupPrepend">{this.state.category}</InputGroup.Text>
+                                <InputGroup.Text id="inputGroupPrepend">{this.state.category} | {this.state.quantity}</InputGroup.Text>
                             </InputGroup.Prepend>
                             <Form.Control
                                 as="select"
@@ -71,7 +79,7 @@ class FormComponent extends Component {
                             </Form.Control>
                         </InputGroup>
                     </Form.Group>
-                    
+
                     <Form.Group controlId="formDesiredAmount">
                         <Form.Label>Desired buy price</Form.Label>
                         <Form.Control
