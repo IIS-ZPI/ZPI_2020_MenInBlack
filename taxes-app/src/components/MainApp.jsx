@@ -34,6 +34,7 @@ class MainApp extends Component {
     }
 
     constructTableData = () => {
+        let iterator = 0;
         let resultsArray = [];
         let tempRecord;
         fetch(statesApi)
@@ -48,7 +49,7 @@ class MainApp extends Component {
                         //count netto prive
                         let nettoPrice = this.countNettoValue(tax, this.state.amount);
 
-                        tempRecord = { state: k, tax: tax + '%', netto: nettoPrice, margin: this.formatPrice(this.state.amount - nettoPrice) }
+                        tempRecord = { id: iterator++, state: k, tax: tax + '%', netto: nettoPrice, margin: this.formatPrice(this.state.amount - nettoPrice) }
                         resultsArray.push(tempRecord);
                     };
                     console.log(resultsArray);
