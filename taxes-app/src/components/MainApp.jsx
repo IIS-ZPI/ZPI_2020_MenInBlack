@@ -52,7 +52,6 @@ class MainApp extends Component {
                         tempRecord = { id: iterator++, state: k, tax: tax + '%', netto: nettoPrice, margin: this.formatPrice(this.state.amount - nettoPrice) }
                         resultsArray.push(tempRecord);
                     };
-                    console.log(resultsArray);
                     this.setState({
                         data: resultsArray
                     })
