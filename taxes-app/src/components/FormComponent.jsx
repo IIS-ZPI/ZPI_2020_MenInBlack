@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import InputGroup from 'react-bootstrap/InputGroup'
+import validator from 'validator';
 
 const categoriesApi = "http://localhost:4000/products"
 
@@ -11,10 +12,13 @@ class FormComponent extends Component {
         super();
         this.state = {
             amount: "00.00",
+            unadjustedPrice: "00.00",
             products: [],
             category: "preparedFood",
             product: "apple",
-            quantity: "10"
+            quantity: "10",
+            adjustPrice: true,
+            isInputValid: false
         };
     }
 
@@ -29,32 +33,56 @@ class FormComponent extends Component {
                 });
     }
 
+    setPrice(price){
+        let quant = Number.parseInt(this.state.quantity);
+        let adjustedPrice = Number.parseFloat(price);
+        if (this.state.adjustPrice) {
+            if (quant <= 10) {
+                adjustedPrice = adjustedPrice * 1.95;
+            }
+            else {
+                adjustedPrice = adjustedPrice * (1 + (0.05 + (100 - quant) * 0.01));
+            }
+        }
+        return adjustedPrice;
+    }
+
     onAmountChange = (newValue) => {
+        let adjustedPrice = this.setPrice(newValue.target.value);
         this.setState({
             ...this.state,
-            amount: newValue.target.value
+            unadjustedPrice: newValue.target.value,
+            amount: adjustedPrice.toString(),
+            isInputValid: !validator.isCurrency(newValue.target.value, { digits_after_decimal: [1, 2] })
         })
-        this.props.amountChange(newValue.target.value);
+        this.props.amountChange(adjustedPrice);
     }
 
     fetchQuantity = () => {
         return this.state.products.find(product => product.name === this.state.product).quantity
     }
 
+    setQuantity = () => {
+        let quant = this.fetchQuantity();
+        this.setState({
+            ...this.state,
+            quantity: quant,
+            adjustPrice: Number.parseInt(quant) <= 100 ? true : false
+        })
+    }
+
     onProductChange = (newProduct) => {
-        let { options, selectedIndex } = newProduct.target
+        let { options, selectedIndex } = newProduct.target;
+        this.setPrice(this.state.unadjustedPrice);
         this.setState({
             ...this.state,
             category: newProduct.target.value,
             product: options[selectedIndex].innerHTML,
-            quantity: this.fetchQuantity()
-        })
-        this.props.categoryChange(newProduct.target.value);
+        }, this.setQuantity)
     }
 
-    validate = () => {
-        var regex = /^\d+(?:\.\d{0,2})$/;
-        return !!!regex.test(this.state.amount)
+    formatPrice = (number) => {
+        return Number(number).toFixed(2);
     }
 
     render() {
@@ -86,15 +114,20 @@ class FormComponent extends Component {
                             type="number"
                             min="0.00"
                             max="10000.00"
-                            step="0.01"
+                            step="0.10"
                             lang="en_EN"
                             placeholder={this.state.amount}
                             onChange={this.onAmountChange}
-                            isInvalid={this.validate()}
+                            isInvalid={this.state.isInputValid}
                         />
                         <Form.Text className="text-muted">
                             In dollars (format xx.xx)
                         </Form.Text>
+                        {this.state.adjustPrice &&
+                            <Form.Text className="text-muted">
+                                <strong>Price adjusted to {this.formatPrice(this.state.amount)} due to low quantity ({this.state.quantity})</strong>
+                            </Form.Text>
+                        }
                     </Form.Group>
 
                     <Button
