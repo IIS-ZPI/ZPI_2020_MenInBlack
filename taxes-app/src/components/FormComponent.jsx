@@ -8,8 +8,8 @@ const categoriesApi = "http://localhost:4000/products"
 
 class FormComponent extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             amount: "00.00",
             unadjustedPrice: "00.00",
@@ -33,7 +33,7 @@ class FormComponent extends Component {
                 });
     }
 
-    setPrice(price){
+    setPrice(price) {
         let quant = Number.parseInt(this.state.quantity);
         let adjustedPrice = Number.parseFloat(price);
         if (this.state.adjustPrice) {
@@ -56,6 +56,7 @@ class FormComponent extends Component {
             isInputValid: !validator.isCurrency(newValue.target.value, { digits_after_decimal: [1, 2] })
         })
         this.props.amountChange(adjustedPrice);
+        this.props.hideTable();
     }
 
     fetchQuantity = () => {
@@ -73,12 +74,14 @@ class FormComponent extends Component {
 
     onProductChange = (newProduct) => {
         let { options, selectedIndex } = newProduct.target;
-        this.setPrice(this.state.unadjustedPrice);
+        let adjustedPrice = this.setPrice(this.state.unadjustedPrice);
         this.setState({
             ...this.state,
+            amount: adjustedPrice,
             category: newProduct.target.value,
             product: options[selectedIndex].innerHTML,
         }, this.setQuantity)
+        this.props.hideTable();
     }
 
     formatPrice = (number) => {

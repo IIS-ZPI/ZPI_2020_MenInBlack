@@ -24,6 +24,12 @@ class MainApp extends Component {
         })
     }
 
+    hideTable = () => {
+        this.setState({
+            displayTable: false
+        })
+    }
+
     countNettoValue = (tax, desiredPrice) => {
         let divider = tax + 1;
         return this.formatPrice(desiredPrice / divider);
@@ -72,6 +78,7 @@ class MainApp extends Component {
         return (
             <div id="mainComponent">
                 <FormComponent
+                    hideTable={this.hideTable}
                     submitPress={this.displayTable}
                     categoryChange={this.categoryChange}
                     amountChange={this.amountChange}
