@@ -167,282 +167,338 @@
         {
             "name": "apple",
             "category": "groceries",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "orange",
             "category": "groceries",
-            "quantity": 15
+            "quantity": 15,
+            "quantitySold": 99
         },
         {
             "name": "pineapple",
             "category": "groceries",
-            "quantity": 20
+            "quantity": 20,
+            "quantitySold": 99
         },
         {
             "name": "tomato",
             "category": "groceries",
-            "quantity": 50
+            "quantity": 50,
+            "quantitySold": 99
         },
         {
             "name": "bread",
             "category": "groceries",
-            "quantity": 0
+            "quantity": 0,
+            "quantitySold": 99
         },
         {
             "name": "soda",
             "category": "groceries",
-            "quantity": 100
+            "quantity": 100,
+            "quantitySold": 99
         },
         {
             "name": "cereal",
             "category": "groceries",
-            "quantity": 7
+            "quantity": 7,
+            "quantitySold": 99
         },
         {
             "name": "milk",
             "category": "groceries",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "rice",
             "category": "groceries",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "maize",
             "category": "groceries",
-            "quantity": 15
+            "quantity": 15,
+            "quantitySold": 99
         },
         {
             "name": "wheat",
             "category": "groceries",
-            "quantity": 14
+            "quantity": 14,
+            "quantitySold": 99
         },
         {
             "name": "cheese",
             "category": "preparedFood",
-            "quantity": 13
+            "quantity": 13,
+            "quantitySold": 99
         },
         {
             "name": "cheeseburger",
             "category": "preparedFood",
-            "quantity": 12
+            "quantity": 12,
+            "quantitySold": 99
         },
         {
             "name": "sandwich",
             "category": "preparedFood",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "chicken salad",
             "category": "preparedFood",
-            "quantity": 18
+            "quantity": 18,
+            "quantitySold": 99
         },
         {
             "name": "lobster",
             "category": "preparedFood",
-            "quantity": 11
+            "quantity": 11,
+           "quantitySold": 99
         },
         {
             "name": "ramen",
             "category": "preparedFood",
-            "quantity": 1000
+            "quantity": 1000,
+            "quantitySold": 99
         },
         {
             "name": "tomato puree",
             "category": "preparedFood",
-            "quantity": 80
+            "quantity": 80,
+            "quantitySold": 99
         },
         {
             "name": "canned beans",
             "category": "preparedFood",
-            "quantity": 16
+            "quantity": 16,
+            "quantitySold": 99
         },
         {
             "name": "xanax",
             "category": "prescriptionDrug",
-            "quantity": 11
+            "quantity": 11,
+            "quantitySold": 99
         },
         {
             "name": "morphine",
             "category": "prescriptionDrug",
-            "quantity": 12
+            "quantity": 12,
+            "quantitySold": 99
         },
         {
             "name": "vicodin",
             "category": "prescriptionDrug",
-            "quantity": 13
+            "quantity": 13,
+            "quantitySold": 99
         },
         {
             "name": "simvastatin",
             "category": "prescriptionDrug",
-            "quantity": 14
+            "quantity": 14,
+            "quantitySold": 99
         },
         {
             "name": "Lisinopril",
             "category": "prescriptionDrug",
-            "quantity": 15
+            "quantity": 15,
+            "quantitySold": 99
         },
         {
             "name": "Levothyroxine",
             "category": "prescriptionDrug",
-            "quantity": 16
+            "quantity": 16,
+            "quantitySold": 99
         },
         {
             "name": "Azithromycin",
             "category": "prescriptionDrug",
-            "quantity": 17
+            "quantity": 17,
+            "quantitySold": 99
         },
         {
             "name": "LMetformin",
             "category": "prescriptionDrug",
-            "quantity": 18
+            "quantity": 18,
+            "quantitySold": 99
         },
         {
             "name": "gripex",
             "category": "nonPrescriptionDrug",
-            "quantity": 19
+            "quantity": 19,
+            "quantitySold": 99
         },
         {
             "name": "Dextromethorphan",
             "category": "nonPrescriptionDrug",
-            "quantity": 20
+            "quantity": 20,
+            "quantitySold": 99
         },
         {
             "name": "advil",
             "category": "nonPrescriptionDrug",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "aleve",
             "category": "nonPrescriptionDrug",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "dulcolax",
             "category": "nonPrescriptionDrug",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "cepacol",
             "category": "nonPrescriptionDrug",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "cortaid",
             "category": "nonPrescriptionDrug",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "colace",
             "category": "nonPrescriptionDrug",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "t-shirt",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 1000
         },
         {
             "name": "shirt",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 100
         },
         {
             "name": "dress",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 10
         },
         {
             "name": "jumper",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 2
         },
         {
             "name": "jacket",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "jeans",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 1
         },
         {
             "name": "suit",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "tie",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 105,
+            "quantitySold": 992
         },
         {
             "name": "hat",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 120,
+            "quantitySold": 99
         },
         {
             "name": "coat",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "sweatshirt",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 1990,
+            "quantitySold": 0
         },
         {
             "name": "blouse",
             "category": "clothing",
-            "quantity": 10
+            "quantity": 44,
+            "quantitySold": 111111
         },
         {
             "name": "program",
             "category": "intangibles",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "mobile app",
             "category": "intangibles",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 99
         },
         {
             "name": "patent",
             "category": "intangibles",
-            "quantity": 10
+            "quantity": 2,
+            "quantitySold": 0
         },
         {
             "name": "life insurance",
             "category": "intangibles",
-            "quantity": 10
+            "quantity": 2,
+            "quantitySold": 99999
         },
         {
             "name": "security investment",
             "category": "intangibles",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 414
         },
         {
             "name": "digital music",
             "category": "intangibles",
-            "quantity": 10
+            "quantity": 10,
+            "quantitySold": 10
         },
         {
             "name": "program",
             "category": "intangibles",
-            "quantity": 10
+            "quantity": 0,
+            "quantitySold": 0
         },
         {
             "name": "customer list",
             "category": "intangibles",
-            "quantity": 10
+            "quantity": 41,
+            "quantitySold": 11
         },
         {
             "name": "program",
             "category": "intangibles",
-            "quantity": 10
+            "quantity": 100,
+            "quantitySold": 99
         }
     ],
     "categories": [
