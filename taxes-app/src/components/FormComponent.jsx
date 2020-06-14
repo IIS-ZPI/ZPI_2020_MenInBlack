@@ -33,7 +33,7 @@ class FormComponent extends Component {
                 });
     }
 
-    setPrice(price){
+    setPrice(price) {
         let quant = Number.parseInt(this.state.quantity);
         let adjustedPrice = Number.parseFloat(price);
         if (this.state.adjustPrice) {
@@ -88,7 +88,10 @@ class FormComponent extends Component {
     render() {
         return (
             <div id="formComponent">
-                <Form>
+                <Form onSubmit={e => {
+                    e.preventDefault();
+                    this.props.submitPress();
+                }}>
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>Select item category</Form.Label>
                         <InputGroup>
