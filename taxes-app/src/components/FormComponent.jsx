@@ -136,7 +136,12 @@ class FormComponent extends Component {
                     <Button
                         variant="primary"
                         type="button"
-                        onClick={this.props.submitPress}
+                        onClick={() => {
+                            this.props.amountChange(this.state.amount);
+                            this.setPrice(this.state.unadjustedPrice);
+                            this.props.submitPress();
+                        }
+                    }
                     >
                         Submit
                     </Button>
