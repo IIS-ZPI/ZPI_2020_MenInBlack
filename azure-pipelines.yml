@@ -18,6 +18,6 @@ steps:
 - script: |
     cd taxes-app
     npm install
-    npm run start-db &
+    nohup npm run start-db
     npm start
   displayName: 'npm install and build'
