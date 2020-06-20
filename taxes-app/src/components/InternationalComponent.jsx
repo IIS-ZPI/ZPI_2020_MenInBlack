@@ -18,7 +18,7 @@ const ratesAPI = "https://finnhub.io/api/v1/forex/rates"
 const apiToken = "brn1mtfrh5rf0nlm52t0"
 const baseCurrency = "USD"
 
-class componentName extends Component {
+class InternationalComponent extends Component {
 
     constructor(props) {
         super(props);
@@ -100,4 +100,4 @@ class componentName extends Component {
     }
 }
 
-export default componentName;
+export default InternationalComponent;
