@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import { Button } from 'react-bootstrap'
 import InputGroup from 'react-bootstrap/InputGroup'
 import validator from 'validator';
+import InternationalComponent from './InternationalComponent'
 
 const categoriesApi = "http://localhost:4000/products"
 
@@ -18,7 +19,7 @@ class FormComponent extends Component {
             product: "apple",
             quantity: "10",
             adjustPrice: true,
-            isInputValid: false
+            isInputValid: false,
         };
     }
 
@@ -144,11 +145,14 @@ class FormComponent extends Component {
                             this.setPrice(this.state.unadjustedPrice);
                             this.props.submitPress();
                         }
-                    }
+                        }
                     >
                         Submit
                     </Button>
                 </Form>
+                <InternationalComponent
+                    price={this.formatPrice(this.state.amount)}
+                />
             </div>
         );
     }
