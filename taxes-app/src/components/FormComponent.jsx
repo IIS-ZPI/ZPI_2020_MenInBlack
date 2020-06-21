@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import InputGroup from 'react-bootstrap/InputGroup'
 import validator from 'validator';
 
-const categoriesApi = "http://localhost:4000/products"
+const categoriesApi = "/products"
 
 class FormComponent extends Component {
 
@@ -144,7 +144,7 @@ class FormComponent extends Component {
                             this.setPrice(this.state.unadjustedPrice);
                             this.props.submitPress();
                         }
-                    }
+                        }
                     >
                         Submit
                     </Button>
