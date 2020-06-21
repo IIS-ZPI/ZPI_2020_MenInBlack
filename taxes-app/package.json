@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-db": "json-server -p 4000 src/database/data.json",
+    "start-db": "json-server -p 4000 --host 0.0.0.0 src/database/data.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:ci": "CI=true react-scripts test --env=jsdom",
