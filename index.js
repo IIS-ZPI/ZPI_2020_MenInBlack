@@ -10,10 +10,6 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.get('/products', (req, res) => {
     const count = 5;
 
-    // Generate some passwords
-    // const passwords = Array.from(Array(count).keys()).map(i =>
-    //     generatePassword(12, false)
-    // )
     let products = [
         {
             "name": "apple",
@@ -483,9 +479,9 @@ app.get('/states', (req, res) => {
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname + '/client/build/index.html'));
-// });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
+});
 
 const port = process.env.PORT || 4000;
 app.listen(port);
