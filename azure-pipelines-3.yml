@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    heroku login -i
+    heroku git:remote -a taxes-app
+
+    git config --global user.email "215801@edu.p.lodz.pl"
+    git config --global user.name "Paweł Łazicki"
+
+    git checkout azure-pipelines -f
+    git push heroku azure-pipelines:master -f
+    
+  displayName: 'deploy heroku'
+
