@@ -5,7 +5,7 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import validator from 'validator';
 import InternationalComponent from './InternationalComponent'
 
-const categoriesApi = "http://localhost:4000/products"
+const categoriesApi = "/products"
 
 class FormComponent extends Component {
 

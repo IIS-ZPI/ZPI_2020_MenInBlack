@@ -3,7 +3,7 @@ import FormComponent from './FormComponent';
 import TableComponent from './TableComponent'
 import '../css/form.css'
 
-const statesApi = "http://localhost:4000/states"
+const statesApi = "/states"
 
 class MainApp extends Component {
     constructor(props) {

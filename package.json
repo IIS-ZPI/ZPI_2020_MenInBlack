@@ -1,0 +1,25 @@
+{
+  "name": "MenInBlack",
+  "version": "1.0.0",
+  "description": "an app that does sth with prices in the USA.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "heroku-postbuild": "cd taxes-app && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IIS-ZPI/ZPI_2020_MenInBlack.git"
+  },
+  "keywords": [],
+  "author": "AG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IIS-ZPI/ZPI_2020_MenInBlack/issues"
+  },
+  "homepage": "https://github.com/IIS-ZPI/ZPI_2020_MenInBlack#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

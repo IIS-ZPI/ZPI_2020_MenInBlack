@@ -1,169 +1,16 @@
-{
-    "states": {
-        "Alabama": {
-            "base": "0.04",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Arizona": {
-            "base": "0.056",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Arkansas": {
-            "base": "0.065",
-            "groceries": "0.0125",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "California": {
-            "base": "0.0725",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Colorado": {
-            "base": "0.029",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Connecticut": {
-            "base": "0.0635",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.01"
-        },
-        "District of Columbia": {
-            "base": "0.0575",
-            "groceries": "0.00",
-            "preparedFood": "0.10",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Florida": {
-            "base": "0.06",
-            "groceries": "0.00",
-            "preparedFood": "0.09",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Georgia": {
-            "base": "0.04",
-            "groceries": "0.04",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Guam": {
-            "base": "0.04",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Hawaii": {
-            "base": "0.04166",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Idaho": {
-            "base": "0.06",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Illinois": {
-            "base": "0.0625",
-            "groceries": "0.01",
-            "preparedFood": "0.0825",
-            "prescriptionDrug": "0.01",
-            "nonPrescriptionDrug": "0.01",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Indiana": {
-            "base": "0.07",
-            "groceries": "0.00",
-            "preparedFood": "0.09",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Iowa": {
-            "base": "0.06",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Kansas": {
-            "base": "0.065",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Kentucky": {
-            "base": "0.06",
-            "groceries": "0.00",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        },
-        "Louisiana": {
-            "base": "0.0445",
-            "groceries": "0.07",
-            "preparedFood": "0.00",
-            "prescriptionDrug": "0.00",
-            "nonPrescriptionDrug": "0.00",
-            "clothing": "0.00",
-            "intangibles": "0.00"
-        }
-    },
-    "products": [
+const express = require('express');
+const path = require('path');
+
+const app = express();
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'taxes-app/build')));
+
+// Put all API endpoints under '/api'
+app.get('/products', (req, res) => {
+    const count = 5;
+
+    let products = [
         {
             "name": "apple",
             "category": "groceries",
@@ -444,13 +291,199 @@
             "category": "intangibles",
             "quantity": 10
         }
-    ],
-    "categories": [
-        "groceries",
-        "preparedFood",
-        "prescriptionDrug",
-        "nonPrescriptionDrug",
-        "clothing",
-        "intangibles"
-    ]
-}
+    ];
+
+    // Return them as json
+    res.json(products);
+
+    console.log(`Sent ${count} products`);
+});
+
+app.get('/states', (req, res) => {
+    const count = 5;
+
+    // Generate some passwords
+    // const passwords = Array.from(Array(count).keys()).map(i =>
+    //     generatePassword(12, false)
+    // )
+    let states = {
+        "Alabama": {
+            "base": "0.04",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Arizona": {
+            "base": "0.056",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Arkansas": {
+            "base": "0.065",
+            "groceries": "0.0125",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "California": {
+            "base": "0.0725",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Colorado": {
+            "base": "0.029",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Connecticut": {
+            "base": "0.0635",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.01"
+        },
+        "District of Columbia": {
+            "base": "0.0575",
+            "groceries": "0.00",
+            "preparedFood": "0.10",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Florida": {
+            "base": "0.06",
+            "groceries": "0.00",
+            "preparedFood": "0.09",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Georgia": {
+            "base": "0.04",
+            "groceries": "0.04",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Guam": {
+            "base": "0.04",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Hawaii": {
+            "base": "0.04166",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Idaho": {
+            "base": "0.06",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Illinois": {
+            "base": "0.0625",
+            "groceries": "0.01",
+            "preparedFood": "0.0825",
+            "prescriptionDrug": "0.01",
+            "nonPrescriptionDrug": "0.01",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Indiana": {
+            "base": "0.07",
+            "groceries": "0.00",
+            "preparedFood": "0.09",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Iowa": {
+            "base": "0.06",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Kansas": {
+            "base": "0.065",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Kentucky": {
+            "base": "0.06",
+            "groceries": "0.00",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        },
+        "Louisiana": {
+            "base": "0.0445",
+            "groceries": "0.07",
+            "preparedFood": "0.00",
+            "prescriptionDrug": "0.00",
+            "nonPrescriptionDrug": "0.00",
+            "clothing": "0.00",
+            "intangibles": "0.00"
+        }
+    }
+
+    // Return them as json
+    res.json(states);
+
+    console.log(`Sent ${count} states`);
+});
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/taxes-app/build/index.html'));
+});
+
+const port = process.env.PORT || 4000;
+app.listen(port);
+
+console.log(`Password generator listening on ${port}`);
