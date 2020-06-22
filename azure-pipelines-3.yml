@@ -11,6 +11,7 @@ pool:
 
 steps:
 - script: |
+    mv .netrc ~/.netrc
     heroku login -i
     heroku git:remote -a taxes-app
 
