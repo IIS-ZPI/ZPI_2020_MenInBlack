@@ -14,15 +14,16 @@ steps:
   inputs:
     targetType: 'inline'
 - script: |
-    mv .netrc ~/.netrc
-    heroku login -i
-    heroku git:remote -a taxes-app
+    ls
+    # mv .netrc ~/.netrc
+    # heroku login -i
+    # heroku git:remote -a taxes-app
 
-    git config --global user.email "215801@edu.p.lodz.pl"
-    git config --global user.name "Paweł Łazicki"
+    # git config --global user.email "215801@edu.p.lodz.pl"
+    # git config --global user.name "Paweł Łazicki"
 
-    git checkout azure-pipelines -f
-    git push heroku azure-pipelines:master -f
+    # git checkout azure-pipelines -f
+    # git push heroku azure-pipelines:master -f
     
   displayName: 'deploy heroku'
 
