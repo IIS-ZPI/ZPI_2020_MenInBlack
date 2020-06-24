@@ -295,6 +295,11 @@ app.get('/products', (req, res) => {
             "name": "laptop",
             "category": "electronics",
             "quantity": 50
+        },
+        {
+            "name": "keyboard",
+            "category": "electronics",
+            "quantity": 20
         }
     ];
 
