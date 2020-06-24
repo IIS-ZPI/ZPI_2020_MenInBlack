@@ -290,7 +290,12 @@ app.get('/products', (req, res) => {
             "name": "program",
             "category": "intangibles",
             "quantity": 10
-        }
+        },
+        {
+            "name": "laptop",
+            "category": "electronics",
+            "quantity": 50
+        },
     ];
 
     // Return them as json
