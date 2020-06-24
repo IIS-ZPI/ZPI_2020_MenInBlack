@@ -295,7 +295,7 @@ app.get('/products', (req, res) => {
             "name": "laptop",
             "category": "electronics",
             "quantity": 50
-        },
+        }
     ];
 
     // Return them as json
