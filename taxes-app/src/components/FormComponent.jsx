@@ -116,7 +116,7 @@ class FormComponent extends Component {
                     </Form.Group>
 
                     <Form.Group controlId="formDesiredAmount">
-                        <Form.Label>Desired buy price</Form.Label>
+                        <Form.Label>Sell for</Form.Label>
                         <Form.Control
                             type="number"
                             min="0.00"

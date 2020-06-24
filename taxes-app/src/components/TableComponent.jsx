@@ -10,7 +10,7 @@ const columns = [{
     text: 'tax (in %)'
 }, {
     dataField: 'netto',
-    text: 'Sell for'
+    text: 'Netto price'
 }, {
     dataField: 'margin',
     text: 'tax (in $)'
