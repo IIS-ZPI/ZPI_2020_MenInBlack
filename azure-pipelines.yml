@@ -19,5 +19,4 @@ steps:
     cd taxes-app
     npm install
     npm build
-    npm run test:ci
   displayName: 'npm install and build'
